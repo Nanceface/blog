@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Techilicious font-->
+		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<!--London font-->
+		<link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+		<!--css-->
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>Techilicious</h1>
+		<h2>London	|	California</h2>
+		<!--Navigation Bar-->
+		<ul>		
+ 			<li><a href="contact.html">Contact</a></li>
+ 			<li><a href="about.html">About Us</a></li>
+ 			<li><a href="index.html">Home</a></li>
+		</ul>
+		<!--Flipping cards!-->
+		<div class="card effect__EFFECT">
+  			<div class="card__front">
+   				 <span class="card__text">Title</span>
+  			</div>
+  			<div class="card__back">
+    			<span class="card__text">Blurb</span>
+  			</div>
+		</div>
+		<script>
+			function ()
+			{	var cards = document.querySelectorAll(".card.effect__click");
+  				for ( var i  = 0, len = cards.length; i < len; i++ ) 
+  				{
+    				var card = cards[i];
+    				clickListener( card );
+  				}
+
+  				function clickListener(card) {
+    			card.addEventListener( "click", function() 
+				{
+      			var c = this.classList;
+      			c.contains("flipped") === true ? c.remove("flipped") : c.add("flipped");
+    });
+  }
+})();</script>
+	</body>
+</html>
+
